@@ -19,7 +19,10 @@ OUTPUT_FILE = pdf_path.with_name(pdf_path.stem + "_Bestellunterlagen.xlsx")
 # Code格式
 # =========================
 
-CODE_RE = re.compile(r'^(0P\w+|DE\w+|TD\d+|ZS\w+|ZLS\d+)$')
+CODE_RE = re.compile(
+    r'^(0P\w+|DE\w+|TD\d+|ZS\w+|ZLS\d+|ZW\d+|ZLA\d+)$',
+    re.IGNORECASE
+)
 
 HEADER = [
     "MAN Truck",
